@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Linguist</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+     <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+      <string-array name="country_array">
+        <item>English</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Vitatnamie</item>
+        <item>Hindi</item>
+        <item>Greek</item>
+        <item>Polish</item>
+        <item>Spanish</item>
+    </string-array>
+</resources>

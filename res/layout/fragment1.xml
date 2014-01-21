@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BDD3E9"
+    tools:context=".Translate_my_text" >
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFF" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="2dp" 
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="Select From Language :"
+            android:textColor="#00497F"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/fromCountry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/country_array"
+          	android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_text" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select To Language :"
+            android:layout_marginTop="10dp"
+            android:padding="2dp" 
+            android:textColor="#00497F"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/toCountry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/country_array"
+           android:layout_marginTop="5dp"
+             android:paddingLeft="20dp"
+            android:background="@drawable/edit_text" />
+        
+        <RelativeLayout android:id="@+id/RelativeLayout01" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent"
+    	android:padding="30dp"
+    	android:paddingLeft="40dp"
+    	android:paddingRight="40dp">
+    	
+             <ImageButton
+            android:id="@+id/btn_speak"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.33"
+            
+            android:contentDescription="Speak Now"
+            android:src="@android:drawable/ic_btn_speak_now" />
+    		    
+    		
+
+</RelativeLayout>
+
+    </LinearLayout>
+
+   
+
+       
+    
+        
+        
+
+        
+ 
+
+</RelativeLayout>
