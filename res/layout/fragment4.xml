@@ -8,7 +8,47 @@
         android:layout_height="4px"
         android:layout_alignParentTop="true"
         android:background="#FFF"
-        />
+        /> 
+     
+     <RelativeLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:gravity="center" >
+
+    	<TextView
+        	android:id="@+id/textView1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Translate From:"
+        	android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    	<Spinner
+    	    android:id="@+id/spinner1"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_below="@id/textView1"
+    	    android:layout_centerHorizontal="true"
+    	    android:entries="@array/country_array" />
+    
+    
+    	<TextView
+        	android:id="@+id/textView2"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@id/spinner1"
+    	    android:text="Trasnlate To:"
+        	android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    	<Spinner
+    	    android:id="@+id/spinner2"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_below="@id/textView2"
+    	    android:entries="@array/country_array" />
+    	
+    
+	</RelativeLayout>
      
    
 

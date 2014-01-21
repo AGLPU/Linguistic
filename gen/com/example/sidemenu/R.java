@@ -791,6 +791,7 @@ containing a value of this type.
         /**  Minimum width of the search view text entry area. 
          */
         public static final int abs__search_view_text_min_width=0x7f07000b;
+        public static final int vp_text_size=0x7f07000f;
     }
     public static final class drawable {
         public static final int about_author=0x7f020000;
@@ -983,17 +984,20 @@ containing a value of this type.
         public static final int left_drawer=0x7f04003f;
         public static final int linearLayout1=0x7f040033;
         public static final int listMode=0x7f040002;
-        public static final int menu_load=0x7f040047;
-        public static final int menu_settings=0x7f040046;
+        public static final int menu_load=0x7f04004a;
+        public static final int menu_settings=0x7f040049;
         public static final int normal=0x7f040001;
-        public static final int progressBar1=0x7f040045;
+        public static final int progressBar1=0x7f040048;
         public static final int separator=0x7f040032;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
+        public static final int spinner1=0x7f040045;
+        public static final int spinner2=0x7f040047;
         public static final int subtitle=0x7f04003c;
         public static final int tabMode=0x7f040003;
         public static final int textView1=0x7f040042;
+        public static final int textView2=0x7f040046;
         public static final int title=0x7f04003b;
         public static final int to=0x7f040035;
         public static final int toCountry=0x7f040043;
