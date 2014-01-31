@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:padding="30dp"
+    tools:context=".PaypalActivity" >
+
+    <Button
+        android:id="@+id/buyItBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner"
+        android:drawableLeft="@drawable/ic_launcher"
+        android:onClick="onBuyPressed"
+        android:paddingBottom="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="40dp"
+       
+        android:text="Buy The Application"
+        android:textColor="#000" />
+
+</RelativeLayout>

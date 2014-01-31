@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"  android:background="#A33421"
+    android:layout_height="match_parent"  android:background="#ebebeb"
    >
     
     <View 
@@ -11,7 +11,41 @@
         android:layout_alignParentTop="true"
         android:background="#FFF"
         />
- 
-   
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/separator"
+        android:layout_marginTop="34dp"
+        android:text=""
+        android:textSize="20dp" />
+     <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator"
+        android:layout_margin="10dp"
+        android:textColor="#D92672"
+        android:textColorLink="#272822"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Pay Using PayPal"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/spinner"
+        android:drawableTop="@drawable/ic_launcher"
+        android:text="Go for Subscription"
+        android:textColor="#000"
+        android:padding="25dp" />
  
 </RelativeLayout>

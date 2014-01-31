@@ -3,7 +3,14 @@
      
     <item
         android:id="@+id/menu_load"
-        android:icon="@drawable/action_about"
+        android:icon="@drawable/message"
+        android:orderInCategory="200"
+        android:showAsAction="always"
+        android:title="Load"/>
+    
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/share"
         android:orderInCategory="200"
         android:showAsAction="always"
         android:title="Load"/>

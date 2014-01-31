@@ -17,8 +17,8 @@ public class TranslateHttpClient {
         System.out.println(newLocation);
 
         try {
-        	Log.d("URL",BASE_URL+newLocation+"&langpair="+Text_Conversion.fromCode+"|"+Text_Conversion.toCode);
-            con = (HttpURLConnection) ( new URL(BASE_URL+newLocation+"&langpair="+Text_Conversion.fromCode+"|"+Text_Conversion.toCode)).openConnection();
+        	Log.d("URL",BASE_URL+newLocation+"&langpair="+Text_Conversion.from_code+"|"+Text_Conversion.to_code);
+            con = (HttpURLConnection) ( new URL(BASE_URL+newLocation+"&langpr="+Text_Conversion.from_code+"|"+Text_Conversion.to_code)).openConnection();
             con.setRequestMethod("GET");
             con.setDoInput(true);
             con.setDoOutput(true);

@@ -44,12 +44,9 @@ public class TranslatorTask extends AsyncTask<String, Integer, String>{
 	@Override
 	protected void onPostExecute(String result) {
 		// TODO Auto-generated method stub
-		//MainActivity.result=result;
-		//MainActivity.tv.setText(result);
+		
 		dialog.dismiss();
-		//Text_Conversion.my_text.setText(result);
-		Converted_Text.my_text.setText(result);
-		//Text_Conversion.translated_string=result;
+		Text_Conversion.to_language.setText(result);
 	}
 
 

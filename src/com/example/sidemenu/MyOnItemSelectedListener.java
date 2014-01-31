@@ -11,46 +11,57 @@ public class MyOnItemSelectedListener implements OnItemSelectedListener {
 	public void onItemSelected(AdapterView<?> parent, View view, int pos,
 			long id) {
 		// TODO Auto-generated method stub
-		Toast.makeText(parent.getContext(), "Selected Country : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
+		//Toast.makeText(parent.getContext(), "Selected Country : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
 
 		switch(pos){
 		case 0:
-			Fragment1.from="en";
-			Fragment1.from_lang="English";
+			
+			Text_Conversion.from_lang="English";
+			Text_Conversion.from_code="en";
 			break;
 		case 1:
-			Fragment1.from="fr";
-			Fragment1.from_lang="French";
+			
+			Text_Conversion.from_lang="French";
+			Text_Conversion.from_code="fr";
 			break;
 		case 2:
-			Fragment1.from="de";
-			Fragment1.from_lang="German";
+			
+			Text_Conversion.from_lang="German";
+			Text_Conversion.from_code="de";
 			break;
 		
 		case 3:
-			Fragment1.from="vi";
-			Fragment1.from_lang="Vietnamese";
+			
+			Text_Conversion.from_lang="Vietnamese";
+			Text_Conversion.from_code="vi";
 			break;
 		case 4:
-			Fragment1.from="hi";
-			Fragment1.from_lang="Hindi";
+			
+			Text_Conversion.from_lang="Hindi";
+			Text_Conversion.from_code="hi";
 			break;
 		case 5:
-			Fragment1.from="el";
-			Fragment1.from_lang="Greek";
+			
+			Text_Conversion.from_lang="Greek";
+			Text_Conversion.from_code="el";
 			break;
 		case 6:
-			Fragment1.from="pl";
-			Fragment1.from_lang="Polish";
+			
+			Text_Conversion.from_lang="Polish";
+			Text_Conversion.from_code="pl";
 			break;
 		case 7:
-			Fragment1.from="es";
-			Fragment1.from_lang="Spanish";
+			
+			Text_Conversion.from_lang="Spanish";
+			Text_Conversion.from_code="es";
 			break;
 		default:
-			Fragment1.from="en";
-			Fragment1.from_lang="English";
+			
+			Text_Conversion.from_lang="English";
+			Text_Conversion.from_code="en";
 		}
+		
+		
 		
 	}
 

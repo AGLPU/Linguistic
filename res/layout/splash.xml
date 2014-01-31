@@ -2,16 +2,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fff" >
+    android:background="@drawable/home"
+    android:gravity="center" >
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-       android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
-        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp" >
+
+        <ImageButton
+            android:id="@+id/fbLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlButton"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:src="@drawable/fb_button_selector" />
+
+        <RelativeLayout
+            android:id="@+id/rlButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fbLogin"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/fbLogin" >
+
+            <Button
+                android:id="@+id/noSharing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp"
+                android:drawableLeft="@drawable/about_author"
+                android:text="No I don&apos;t like sharing"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

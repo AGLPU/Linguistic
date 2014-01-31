@@ -13,9 +13,9 @@
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#348DB1"
+        android:background="#4C4C49"
         android:choiceMode="singleChoice"
-        android:divider="#F9F9F9"
+        android:divider="#ffffff"
         
         android:dividerHeight="1dp" />
  

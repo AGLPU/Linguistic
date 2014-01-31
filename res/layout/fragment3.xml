@@ -2,7 +2,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
-  	android:background="#BDD3E9" >
+  	android:background="#EBEBEB" >
+  	
+    <View 
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="4px"
+        android:layout_alignParentTop="true"
+        android:background="#FFF"
+        />
+ 
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator"
+        android:layout_margin="10dp"
+        android:textColor="#D92672"
+        android:textColorLink="#272822"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+    
+     <TextView
+         android:id="@+id/helpdescription"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/help"
+         android:layout_margin="10dp"
+         android:scrollbars="vertical"
+         android:textColor="#272822"
+         android:textColorLink="#D92672"
+         android:textSize="16dp"
+         android:layout_centerHorizontal="true" >
+
+</TextView>
+        
+    
     
 
      

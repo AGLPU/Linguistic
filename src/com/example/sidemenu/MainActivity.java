@@ -1,8 +1,11 @@
 package com.example.sidemenu;
 
+import java.util.ArrayList;
+
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+
 
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
@@ -15,6 +18,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -29,7 +33,9 @@ public class MainActivity extends SherlockFragmentActivity {
 	MenuListAdapter mMenuAdapter;
 	String[] title;
 	String[] subtitle;
-
+databasehelper db;
+ProductTable model1;
+int counter;
 	int[] icon;
 	// Fragmensts Name
 
@@ -46,7 +52,47 @@ public class MainActivity extends SherlockFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.drawer_main);
-
+		
+		counter=getItem();
+        if (counter>0&&counter!=20000) {
+     		
+     			
+     			
+     			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+     			 
+     			// set title
+     			alertDialogBuilder.setTitle("Subscription");
+     			
+     			alertDialogBuilder
+     			
+     				.setMessage("Please Upgrade your app")
+     				.setCancelable(true)
+     				.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+     					
+     					@Override
+     					public void onClick(DialogInterface dialog, int which) {
+     						// TODO Auto-generated method stub
+     					//MainActivity.this.finish();
+     						Intent intent1 = new Intent(getApplicationContext(),
+         							PaypalActivity.class);
+         					startActivity(intent1);
+         
+     						
+     					}
+     				})
+     				.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+     					
+     					@Override
+     					public void onClick(DialogInterface dialog, int which) {
+     						alertDialog.dismiss();
+     					}
+     				});
+     			// create alert dialog
+     			 alertDialog = alertDialogBuilder.create();
+     			alertDialog.show();
+     			
+     		}
+        
 		// Generate title
 		title = new String[] { "Home", "Subscription", "Help", "Settings",
 				"About Us" };
@@ -86,7 +132,7 @@ public class MainActivity extends SherlockFragmentActivity {
 
 		// Set Action color
 		getSupportActionBar().setBackgroundDrawable(
-				new ColorDrawable(Color.parseColor("#2B3A41")));
+				new ColorDrawable(Color.parseColor("#2F302B")));
 		getSupportActionBar().setTitle(
 				Html.fromHtml("<font color='#ffffff'>App Name</font>"));
 
@@ -168,7 +214,6 @@ public class MainActivity extends SherlockFragmentActivity {
 									int which) {
 								// TODO Auto-generated method stub
 								MainActivity.this.finish();
-
 							}
 						})
 				.setNegativeButton("Cancel",
@@ -196,7 +241,31 @@ public class MainActivity extends SherlockFragmentActivity {
 			selectItem(position);
 		}
 	}
+	 public int getItem() {
+			Object tb = null;
+			db = new databasehelper(getApplicationContext());
+			db.getWritableDatabase();
+			model1 = new ProductTable();
 
+			db.getproducts();
+			Log.d("amama", "amaj");
+			// Stack st=new Stack();
+			ArrayList al = new ArrayList();
+
+			al = db.getproducts();
+			int size = al.size();
+			if (size == 0)
+				tb = 0;
+			else
+				tb = al.get(size - 1);
+			int tb1 = (Integer) tb;
+			counter = tb1;
+			
+			Log.d("ckckc", String.valueOf(counter));
+			
+			return counter;
+			
+		}
 	private void selectItem(int position) {
 
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -204,9 +273,11 @@ public class MainActivity extends SherlockFragmentActivity {
 		switch (position) {
 		case 0:
 			ft.replace(R.id.content_frame, fragment1);
+			
 			break;
 		case 1:
 			ft.replace(R.id.content_frame, fragment2);
+			
 			break;
 		case 2:
 			ft.replace(R.id.content_frame, fragment3);
@@ -245,4 +316,5 @@ public class MainActivity extends SherlockFragmentActivity {
 	protected void onActivityResult(int request, int result, Intent data) {
 		super.onActivityResult(request, result, data);
 	}
+	 
 }
